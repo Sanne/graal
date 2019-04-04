@@ -196,6 +196,7 @@ final class ProviderUtil {
             try {
                 System.loadLibrary("sunec");
             } catch (UnsatisfiedLinkError e) {
+            	e.printStackTrace();
                 /*
                  * SunEC has a mode where it can function without the full ECC implementation when
                  * native library is absent, however, then fewer EC algorithms are available). If
